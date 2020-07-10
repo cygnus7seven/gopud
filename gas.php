@@ -61,7 +61,7 @@ if(strpos($register, '"otp_token"')) {
             sleep(10);
         }
 
-        $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420"}');
+        $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
         $message = fetch_value($promo,'"message":"','"');
 
         if(strpos($promo, 'Promo kamu sudah bisa dipakai')) {
@@ -79,7 +79,7 @@ if(strpos($register, '"otp_token"')) {
                 sleep(10);
             }
 
-            $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EATLAH"}');
+            $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
             $message = fetch_value($promo,'"message":"','"');
 
             if(strpos($promo, 'Promo kamu sudah bisa dipakai.')) {
@@ -97,7 +97,7 @@ if(strpos($register, '"otp_token"')) {
                     sleep(50);
                 }
 
-                $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
+                $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0607"}');
                 $message = fetch_value($promo,'"message":"','"');
                 echo "\nMessage: ".$message;
                 echo "\nClaiming Voucher GOFOOD 5K + 10K + 15K";
@@ -108,7 +108,7 @@ if(strpos($register, '"otp_token"')) {
                     sleep(10);
                 }
 
-                $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
+                $promo = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD0607"}');
                 $message = fetch_value($promo,'"message":"','"');
                 echo "\nMessage: ".$message;
                 sleep(3);
